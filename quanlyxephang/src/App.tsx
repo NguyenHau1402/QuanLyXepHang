@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import './styles/sb-admin-2.min.css'
 function App() {
   return (
     <div className="App">
