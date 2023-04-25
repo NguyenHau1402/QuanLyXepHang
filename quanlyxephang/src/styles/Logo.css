@@ -1,0 +1,13 @@
+.logo {
+    position: relative;
+    width: 170px;
+    height: 136px;
+    overflow: hidden;
+}
+.logo-fit {
+
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+
+}
