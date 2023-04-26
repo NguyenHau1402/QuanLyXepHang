@@ -1,0 +1,21 @@
+.button-bg {
+    background-color: #FF9138;
+    overflow: hidden;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 0 6px #E7E9F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-color {
+    color: white;
+}
