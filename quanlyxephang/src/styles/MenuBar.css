@@ -1,0 +1,56 @@
+.menu-bar {
+    width: 200px;
+    height: 760px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
+    border-radius: 16px 0px 0px 16px;
+    overflow: hidden;
+    
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.menu-bar li {
+    width: 200px;
+    height: 48px;
+    font-size: 16px;
+    
+}
+
+.menu-bar a {
+    
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #7E7D88;
+
+}
+
+.menu-bar a:hover {
+    background-color: #FF7506;
+    color: white;
+}
+
+.logomenu {
+    width: 80px;
+    height: 64px;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: #f8b47d;
+    color: #FF7506;
+    border-radius: 10px;
+    
+}
