@@ -1,4 +1,4 @@
-import React from "react";
+import '../Input/Input.css'
 type inputProps = {
     text: string
     label: string

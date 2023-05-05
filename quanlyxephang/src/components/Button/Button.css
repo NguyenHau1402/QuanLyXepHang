@@ -1,5 +1,9 @@
-.button-bg {
-    background-color: #FF9138;
+.button-color {
+    color: white;
+}
+
+.btn-primary {
+    background: #FF7506;
     overflow: hidden;
     border-radius: 8px;
     gap: 8px;
@@ -9,13 +13,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    position: absolute;
     width: 120px;
     height: 40px;
     outline: none;
     cursor: pointer;
-}
-
-.button-color {
-    color: white;
 }

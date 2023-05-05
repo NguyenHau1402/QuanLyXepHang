@@ -1,0 +1,63 @@
+.background {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    width: 1440px;
+    height: 750px;
+    background: #F7F7F7;
+    border-radius: 16px;
+    margin-left: 20px;
+}
+
+
+.leftLogo {
+    grid-column: 1;
+    position: relative;
+}
+
+.banner {
+    width: auto;
+    height: 750px;
+    grid-column: 2;
+    background: rgb(237, 232, 232);
+    border-radius: 0px 16px 16px 0px;
+    overflow: hidden;
+}
+
+.banner-img2 {
+    margin-top: 60px;
+    width: 605px;
+    height: 614.06px;
+    margin-left: 100px;
+}
+
+.logo-location {
+    margin-top: 80px;
+    margin-left: 180px;
+    
+
+}
+
+.inputname-location {
+    position: absolute;
+    width: 400px;
+    height: 75px;
+    left: 94px;
+    top: 293px;
+
+}
+
+.inputpass-location {
+    position: absolute;
+    width: 400px;
+    height: 75px;
+    left: 94px;
+    top: 384px;
+}
+
+.button-login {
+    position: absolute;
+    width: 162px;
+    height: 40px;
+    left: 215px;
+    top: 511px;
+}

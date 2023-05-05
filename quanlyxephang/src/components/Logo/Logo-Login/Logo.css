@@ -1,8 +1,10 @@
 .logo {
     position: relative;
-    
+    width: 170px;
+    height: 136px;
     overflow: hidden;
 }
+
 .logo-fit {
 
     object-fit: contain;
