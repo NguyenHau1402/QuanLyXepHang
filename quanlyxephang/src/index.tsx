@@ -1,8 +1,8 @@
 
 import ReactDOM from 'react-dom/client';
 import './components/Button/Button.css'
-import DatePicker from './components/Calendar/DatePicker';
-import Calendar from './components/Calendar/Calendar';
+
+import { Login } from './pages/Account/Login/Login';
 
 
 
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-    <DatePicker />
+    <Login />
    
   </div>
 )
