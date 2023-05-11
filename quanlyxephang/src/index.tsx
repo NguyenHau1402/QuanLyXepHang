@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './components/Button/Button.css'
 
 import { Login } from './pages/Account/Login/Login';
-import Sample from './pages/Account/DashBoard/DashBoard';
-
+import Chart from './pages/Account/DashBoard/DashBoard'
+import MenuBar from './components/MenuBar/MenuBar';
+import { Calendar, DatePicker } from 'antd';
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-   
-    <Sample></Sample>
+    <MenuBar></MenuBar>
+    
   </div>
 )
