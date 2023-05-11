@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './components/Button/Button.css'
 
 import { Login } from './pages/Account/Login/Login';
+import Sample from './pages/Account/DashBoard/DashBoard';
 
 
 
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-    <Login />
-    
+   
+    <Sample></Sample>
   </div>
 )
