@@ -24,7 +24,7 @@
 
 .input-label {
 
-
+    
     width: 133px;
     height: 27px;
     font-family: 'Nunito';
@@ -33,7 +33,6 @@
     font-size: 18px;
     line-height: 27px;
     color: #37474F;
-
     order: 0;
     flex-grow: 0;
 }

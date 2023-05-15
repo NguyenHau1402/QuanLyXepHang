@@ -1,2 +1,5 @@
-/* shared styles are loaded from: */
-/* https://static.infragistics.com/xplatform/css/samples */
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  

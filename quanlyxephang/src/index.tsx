@@ -5,7 +5,12 @@ import './components/Button/Button.css'
 import { Login } from './pages/Account/Login/Login';
 import Chart from './pages/Account/DashBoard/DashBoard'
 import MenuBar from './components/MenuBar/MenuBar';
-import { Calendar, DatePicker } from 'antd';
+
+import ThietBi from './pages/ThietBi/ThietBi';
+import Calendar from './components/Calendar/Calendar';
+import DatePicker from './components/Calendar/DatePicker';
+
+
 
 
 const root = ReactDOM.createRoot(
@@ -13,7 +18,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-    <MenuBar></MenuBar>
-    
+    <ThietBi></ThietBi>
   </div>
 )
