@@ -1,0 +1,18 @@
+.background {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    width: 1440px;
+    height: 750px;
+    background: #F7F7F7;
+    border-radius: 16px;
+    margin-left: 20px;
+}
+.left {
+    grid-column: 1/2;
+}
+.right {
+    grid-column: 2/3;
+}
+.padding-table{
+    padding-top: 85px;
+}

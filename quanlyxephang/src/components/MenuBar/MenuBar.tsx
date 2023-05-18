@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
 import Logoalta from '../Logo/Logo-MenuBar/Logo';
 import '../MenuBar/MenuBar.css'
+import DSThietBi from '../ThietBi/ThietBi';
 const MenuBar = () => {
     return (
         <BrowserRouter basename="/">
@@ -11,7 +12,7 @@ const MenuBar = () => {
                 <div className='logomenu'>
                     <Logoalta></Logoalta>
                 </div>
-
+                
                 <nav>
                     <ul>
                         <li><Link to="/">
@@ -48,7 +49,9 @@ const MenuBar = () => {
                                 />
                             </svg>
                             <span> Thiết bị</span>
+
                         </Link>
+                            
                         </li>
                         <li><Link to="/services">
                             <svg

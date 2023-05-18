@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import '../ThietBi/ThietBi.css'
+import './ThietBi.css'
 
 interface DataType {
     key: string;
@@ -309,6 +309,16 @@ const data: DataType[] = [
     },
     {
         key: '20',
+        mathietbi: 'KIO_01',
+        tenthietbi: 'Kiosk',
+        diachiip: '192.168.1.10',
+        trangthaihoatdongs: ['Ngưng hoạt động'],
+        trangthaiketnois: ['Mất kết nối'],
+        dichvus: 'Khám tim mạch, Khám sản...',
+        xemthem: 'Khám tim mạch, Khám sản - phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát'
+    },
+    {
+        key: '21',
         mathietbi: 'KIO_01',
         tenthietbi: 'Kiosk',
         diachiip: '192.168.1.10',
