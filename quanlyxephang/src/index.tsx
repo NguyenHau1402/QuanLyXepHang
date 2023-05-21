@@ -23,6 +23,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-    <TrangChu></TrangChu>
+    <MenuBar></MenuBar>
   </div>
 )

@@ -8,12 +8,7 @@ export const TrangChu = () => {
             <div className='left'>
                 <MenuBar></MenuBar>
             </div>
-            <div className='right'>
-                <div className='padding-table'>
-                    <DSThietBi></DSThietBi>
-                </div>
-
-            </div>
+            
         </div>
     )
 }
