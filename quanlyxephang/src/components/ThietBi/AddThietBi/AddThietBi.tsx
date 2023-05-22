@@ -4,7 +4,7 @@ import '../AddThietBi/AddThietBi.css'
 export const AddThietBi = () => {
   return (
     <div className='container-ip'>
-      <form>
+      <div className='left'>
         <Input
           text={''}
           label={'Mã thiết bị:*'}
@@ -19,31 +19,18 @@ export const AddThietBi = () => {
             padding: '10px 270px 10px 12px',
           }}
         ></Input>
+      </div>
+      <div className='right'>
+        
+      </div>
 
-        <Input
-          text={''}
-          label={'Tên thiết bị:*'}
-          placeholder={'Nhập tên thiết bị'}
-          onChange={undefined}
-          style={{
-            width: '540px',
-            height: '44px',
-            border: '1.5px solid #D4D4D7',
-            borderRadius: '8px',
-            fontSize: '16px',
-            padding: '10px 270px 10px 12px',
-          }}
-        ></Input>
+      <div className='footer'>
+        <p>123</p>
+      </div>
 
-        <button type="submit">Submit</button>
-      </form>
+
+
     </div>
 
   )
 }
-
-<div className='ip-1'>
-  <div className='btn'>
-    <p>avc</p>
-  </div>
-</div>

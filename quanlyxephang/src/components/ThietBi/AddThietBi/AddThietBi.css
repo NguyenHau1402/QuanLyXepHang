@@ -1,15 +1,24 @@
 .container-ip {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 10px;
+    width: 1152px;
+    height: 550px;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    
 }
-
-form {
-    width: 540px;
-    padding: 20px;
-    border: 1px solid #D4D4D7;
-    border-radius: 8px;
-}
-
-button[type="submit"] {
-    margin-top: 20px;
-}
+.left {
+    grid-column: 1;
+    grid-row: 1 / span 2; /* Chiếm cả hai hàng đầu của grid */
+  }
+  
+  .right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .footer {
+    grid-column: 1 / span 2; /* Chiếm toàn bộ hai cột của grid */
+    grid-row: 3;
+  }

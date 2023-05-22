@@ -2,6 +2,7 @@
 import ReactDOM from 'react-dom/client';
 import './components/Button/Button.css'
 import MenuBar from './components/MenuBar/MenuBar';
+import { AddThietBi } from './components/ThietBi/AddThietBi/AddThietBi';
 
 
 
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-      <MenuBar></MenuBar>
+      <AddThietBi></AddThietBi>
 
   </div>
 )
