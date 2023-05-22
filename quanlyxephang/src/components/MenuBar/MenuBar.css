@@ -70,24 +70,32 @@
     display: flex;
     flex-direction: column;
     height: 98vh;
-    width: 1112px;
-    
+    width: 1200px;
+
 }
 
-.add-btn{
-    
+.add-btn {
+    position: absolute;
+    top: 13%;
+    right: 100px;
 }
+
+
 .ct-1 {
     flex: 1.2;
-   
+
     color: #FF7506;
 }
+
 .ct-2 {
     flex: 8.8;
-    
+
 }
-.ant-pagination {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 200px !important;
-  }
+
+.img-add {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
