@@ -16,7 +16,7 @@
 }
 
 .btn-add {
-    position: absolute;
+    position: relative;
     width: 80px;
     height: 94px;
     color: #FF7506;

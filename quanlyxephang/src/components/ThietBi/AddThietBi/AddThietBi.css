@@ -1,0 +1,15 @@
+.container-ip {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 540px;
+    padding: 20px;
+    border: 1px solid #D4D4D7;
+    border-radius: 8px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+}

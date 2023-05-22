@@ -4,12 +4,13 @@ type inputProps = {
     label: string
     placeholder: any
     onChange: any
-
+    style?: React.CSSProperties;
 }
 
 const Input = (props: inputProps) => {
+    const { style = {}, onChange,placeholder, ...otherProps } = props;
     return (
-        <div>
+        
             <div className="containerInput">
                 <label className="input-label">{props.label}</label>
                 <input
@@ -17,9 +18,11 @@ const Input = (props: inputProps) => {
                     type="text"
                     placeholder={props.placeholder}
                     onChange={props.onChange}
+                    style={{ ...style}}
+                    {...otherProps}
                 />
             </div>
-        </div>
+        
     );
 };
 

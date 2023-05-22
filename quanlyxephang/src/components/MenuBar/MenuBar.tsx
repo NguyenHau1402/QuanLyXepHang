@@ -7,6 +7,7 @@ import DSDichVu from '../DichVu/DichVu';
 import DSCapSo from '../CapSo/CapSo';
 import DSBaoCao from '../BaoCao/BaoCao';
 import Button1 from '../Button/Button';
+import { AddThietBi } from '../ThietBi/AddThietBi/AddThietBi';
 const MenuBar = () => {
     const [showData, setShowData] = useState(false);
 
@@ -191,16 +192,8 @@ const MenuBar = () => {
 
                     <Routes>
                         <Route path="/" element={<h2>Trang Dashboard</h2>} />
-
                         <Route path="/devices" element={
                             <>
-                                <div className='add-btn'>
-                                    <Link to="/devices/add">
-
-                                        <Button1 type='add' text='Thêm thiết bị'></Button1>
-                                    </Link>
-
-                                </div>
                                 <div className='content-inside'>
                                     <div className='ct-1'>
                                         <h2>Quản lý thiết bị</h2>
@@ -208,17 +201,32 @@ const MenuBar = () => {
                                     <div className='ct-2'>
                                         <DSThietBi></DSThietBi>
                                     </div>
+                                    <div className='ct-3'>
+                                        <div className='add-btn'>
+                                            <Link to="/devices/add">
+                                                <div className='img-add'>
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width={28}
+                                                        height={28}
+                                                        fill="none"
+                                                    >
+                                                        <path
+                                                            fill="#FF9138"
+                                                            d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <Button1 type='add' text='Thêm thiết bị'></Button1>
+
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </>
 
                         } />
                         <Route path="/services" element={<>
-                            <div className='add-btn'>
-                                <Link to="/services/add">
-                                    <Button1 type='add' text='Thêm dịch vụ'></Button1>
-                                </Link>
-
-                            </div>
                             <div className='content-inside'>
                                 <div className='ct-1'>
                                     <h2>Quản lý dịch vụ</h2>
@@ -226,16 +234,32 @@ const MenuBar = () => {
                                 <div className='ct-2'>
                                     <DSDichVu></DSDichVu>
                                 </div>
+                                <div className='ct-3'>
+                                    <div className='add-btn'>
+                                        <Link to="/services/add">
+                                            <div className='img-add'>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={28}
+                                                    height={28}
+                                                    fill="none"
+
+                                                >
+                                                    <path
+                                                        fill="#FF9138"
+                                                        d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <Button1 type='add' text='Thêm dịch vụ'></Button1>
+                                        </Link>
+
+                                    </div>
+                                </div>
                             </div>
                         </>
                         } />
                         <Route path="/numbering" element={<>
-                            <div className='add-btn'>
-                                <Link to="/numbering/add">
-                                    <Button1 type='add' text='Cấp số mới'></Button1>
-                                </Link>
-
-                            </div>
                             <div className='content-inside'>
                                 <div className='ct-1'>
                                     <h2>Quản lý cấp số</h2>
@@ -243,16 +267,32 @@ const MenuBar = () => {
                                 <div className='ct-2'>
                                     <DSCapSo></DSCapSo>
                                 </div>
+                                <div className='ct-3'>
+                                    <div className='add-btn'>
+                                        <Link to="/numbering/add">
+                                            <div className='img-add'>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={28}
+                                                    height={28}
+                                                    fill="none"
+
+                                                >
+                                                    <path
+                                                        fill="#FF9138"
+                                                        d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <Button1 type='add' text='Cấp số mới'></Button1>
+                                        </Link>
+
+                                    </div>
+                                </div>
                             </div>
                         </>
                         } />
                         <Route path="/reports" element={<>
-                            <div className='add-btn'>
-                                <Link to="/devices/add">
-                                    <Button1 type='add' text='Tải về'></Button1>
-                                </Link>
-
-                            </div>
                             <div className='content-inside'>
                                 <div className='ct-1'>
                                     <h2>Quản lý báo cáo</h2>
@@ -260,37 +300,61 @@ const MenuBar = () => {
                                 <div className='ct-2'>
                                     <DSBaoCao></DSBaoCao>
                                 </div>
+                                <div className='ct-3'>
+                                    <div className='add-btn'>
+                                        <Link to="/reports/add">
+                                            <div className='img-add'>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={28}
+                                                    height={28}
+                                                    fill="none"
+
+                                                >
+                                                    <path
+                                                        fill="#FF9138"
+                                                        d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <Button1 type='add' text='Tải về'></Button1>
+                                        </Link>
+
+
+                                    </div>
+                                </div>
                             </div>
                         </>
                         } />
                         <Route path="/system-update" element={<>
-                            <div className='add-btn'>
-                                <Link to="/system-update/add">
-                                    <div className='img-add'>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width={28}
-                                            height={28}
-                                            fill="none"
-
-                                        >
-                                            <path
-                                                fill="#FF9138"
-                                                d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
-                                            />
-                                        </svg>
-                                    </div>
-
-                                    <Button1 type='add' text='Thêm vai trò'></Button1>
-                                </Link>
-
-                            </div>
                             <div className='content-inside'>
                                 <div className='ct-1'>
                                     <h2>Quản lý vai trò</h2>
                                 </div>
                                 <div className='ct-2'>
 
+                                </div>
+                                <div className='ct-3'>
+                                    <div className='add-btn'>
+                                        <Link to="/system-update/add">
+                                            <div className='img-add'>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={28}
+                                                    height={28}
+                                                    fill="none"
+
+                                                >
+                                                    <path
+                                                        fill="#FF9138"
+                                                        d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779Zm-.221 12.542h-3.792v3.792a.881.881 0 0 1-.875.875.881.881 0 0 1-.875-.875v-3.792H9.333A.881.881 0 0 1 8.458 14c0-.478.397-.875.875-.875h3.792V9.334c0-.479.397-.875.875-.875s.875.396.875.875v3.791h3.792c.478 0 .875.397.875.875a.881.881 0 0 1-.875.875Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <Button1 type='add' text='Thêm vai trò'></Button1>
+                                        </Link>
+
+                                    </div>
                                 </div>
                             </div>
                         </>
@@ -304,6 +368,7 @@ const MenuBar = () => {
 
                                 </div>
                             </div>} />
+                        <Route path="/devices/add" element={<AddThietBi></AddThietBi>} />
                     </Routes>
                 </div>
             </div>
