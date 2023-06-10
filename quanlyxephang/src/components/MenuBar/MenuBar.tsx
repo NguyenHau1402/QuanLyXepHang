@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Router, Routes, useNavigate   } from 'react-router-dom';
 import Logoalta from '../Logo/Logo-MenuBar/Logo';
 import '../MenuBar/MenuBar.css'
 import DSThietBi from '../ThietBi/ThietBi';
@@ -8,12 +8,17 @@ import DSCapSo from '../CapSo/CapSo';
 import DSBaoCao from '../BaoCao/BaoCao';
 import Button1 from '../Button/Button';
 import { AddThietBi } from '../ThietBi/AddThietBi/AddThietBi';
+import TabThietBi from '../ThietBi/TabThietBi';
+import Logout from '../Logout/Logout';
+
 const MenuBar = () => {
     const [showData, setShowData] = useState(false);
-
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+   
     const handleMenuClick = () => {
         setShowData(true);
     };
+    
 
     return (
         <BrowserRouter basename="/">
@@ -199,7 +204,7 @@ const MenuBar = () => {
                                         <h2>Quản lý thiết bị</h2>
                                     </div>
                                     <div className='ct-2'>
-                                        <DSThietBi></DSThietBi>
+                                        <TabThietBi></TabThietBi>
                                     </div>
                                     <div className='ct-3'>
                                         <div className='add-btn'>
@@ -361,14 +366,11 @@ const MenuBar = () => {
                         } />
                         <Route path="/log-out" element={
                             <div className='content-inside'>
-                                <div className='ct-1'>
-                                    <h2>Bạn đã logout</h2>
-                                </div>
-                                <div className='ct-2'>
-
-                                </div>
+                                <Logout></Logout>
+                                
+                               
                             </div>} />
-                        <Route path="/devices/add" element={<AddThietBi></AddThietBi>} />
+                        
                     </Routes>
                 </div>
             </div>

@@ -11,7 +11,7 @@
     flex-direction: row;
     width: 120px;
     height: 40px;
-    outline: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -31,5 +31,50 @@
     line-height: 19px;
     text-align: center;
     cursor: pointer;
-    
+    border: none;
+
+}
+
+.btn-secondary {
+    background: #FF9138;
+    overflow: hidden;
+    color: white;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 0 6px #E7E9F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 120px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+}
+
+.btn-tertiary {
+    background: #FFF2E7;
+    overflow: hidden;
+    font-family: 'Nunito';
+    font-style: normal;
+    color: #FF9138;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px 24px;
+    border: 1.5px solid #FF9138;
+    /* down */
+
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 120px;
+    height: 40px;
+
+    cursor: pointer;
 }

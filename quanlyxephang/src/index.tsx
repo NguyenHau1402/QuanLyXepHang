@@ -6,6 +6,10 @@ import { AddThietBi } from './components/ThietBi/AddThietBi/AddThietBi';
 import { TrangChu } from './pages/TrangChu/TrangChu';
 import DSBaoCao from './components/BaoCao/BaoCao';
 import { Login } from './pages/Account/Login/Login';
+import MyTable from './components/ThietBi/TabThietBi';
+import YourComponent from './components/ThietBi/TabThietBi';
+import Loggin from './pages/Account/Login/llogin';
+import Logout from './components/Logout/Logout';
 
 
 
@@ -16,7 +20,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <div>
-    <DSBaoCao></DSBaoCao>
-
+    
+    <Loggin></Loggin>
   </div>
 )
