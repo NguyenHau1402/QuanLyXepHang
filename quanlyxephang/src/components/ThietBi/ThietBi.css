@@ -6,3 +6,17 @@
     background-color: #FF9138 !important;
     
   }
+  .dich-vu .xem-them {
+    color: rgb(49, 49, 234);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .dich-vu .xem-them:hover {
+    text-decoration: none;
+  }
+  
+  .dich-vu a {
+    margin-left: 10px;
+  }
+  

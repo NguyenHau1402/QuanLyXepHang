@@ -10,6 +10,8 @@ import MyTable from './components/ThietBi/TabThietBi';
 import YourComponent from './components/ThietBi/TabThietBi';
 import Loggin from './pages/Account/Login/llogin';
 import Logout from './components/Logout/Logout';
+import ThongTinThietBi from './components/ThietBi/ThongTinThietBi/ThongTinThietBi';
+import ThongTinThietBia from './components/ThietBi/ThongTinThietBi/abc';
 
 
 
@@ -21,6 +23,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <div>
     
-    <Loggin></Loggin>
+  <Loggin></Loggin>
   </div>
 )

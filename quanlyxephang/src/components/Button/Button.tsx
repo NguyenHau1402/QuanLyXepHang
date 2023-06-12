@@ -1,9 +1,10 @@
 import React from "react";
 import '../Button/Button.css'
+
 type BtnProps = {
-  
-  text: string
+  text: string;
   type: keyof typeof styles;
+  onClick?: () => void;
 }
 
 const styles = {
@@ -14,11 +15,10 @@ const styles = {
 }
 
 const Button1 = (props: BtnProps) => {
- 
-  
+  const { text, type, onClick } = props; 
   return (
-    <button className={styles[props.type]}>
-      <p>{props.text}</p>
+    <button className={styles[type]} onClick={onClick}>
+      <p>{text}</p>
     </button>
   );
 };

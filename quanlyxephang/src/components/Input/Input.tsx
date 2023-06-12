@@ -5,6 +5,7 @@ type inputProps = {
     placeholder: any
     onChange: any
     style?: React.CSSProperties;
+    disabled?: boolean;
 }
 
 const Input = (props: inputProps) => {

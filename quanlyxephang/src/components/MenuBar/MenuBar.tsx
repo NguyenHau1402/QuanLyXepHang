@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Link, Route, Router, Routes, useNavigate   } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Router, Routes, useNavigate } from 'react-router-dom';
 import Logoalta from '../Logo/Logo-MenuBar/Logo';
 import '../MenuBar/MenuBar.css'
 import DSThietBi from '../ThietBi/ThietBi';
@@ -10,15 +10,19 @@ import Button1 from '../Button/Button';
 import { AddThietBi } from '../ThietBi/AddThietBi/AddThietBi';
 import TabThietBi from '../ThietBi/TabThietBi';
 import Logout from '../Logout/Logout';
+import TabDichVu from '../DichVu/TabDichVu';
+import TabCapSo from '../CapSo/TabCapSo';
+import TabBaoCao from '../BaoCao/TabBaoCao';
+import  ThongTinThietBi  from '../ThietBi/ThongTinThietBi/ThongTinThietBi';
 
 const MenuBar = () => {
     const [showData, setShowData] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(true);
-   
+
     const handleMenuClick = () => {
         setShowData(true);
     };
-    
+
 
     return (
         <BrowserRouter basename="/">
@@ -210,6 +214,7 @@ const MenuBar = () => {
                                         <div className='add-btn'>
                                             <Link to="/devices/add">
                                                 <div className='img-add'>
+
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         width={28}
@@ -237,7 +242,7 @@ const MenuBar = () => {
                                     <h2>Quản lý dịch vụ</h2>
                                 </div>
                                 <div className='ct-2'>
-                                    <DSDichVu></DSDichVu>
+                                    <TabDichVu></TabDichVu>
                                 </div>
                                 <div className='ct-3'>
                                     <div className='add-btn'>
@@ -270,7 +275,7 @@ const MenuBar = () => {
                                     <h2>Quản lý cấp số</h2>
                                 </div>
                                 <div className='ct-2'>
-                                    <DSCapSo></DSCapSo>
+                                    <TabCapSo></TabCapSo>
                                 </div>
                                 <div className='ct-3'>
                                     <div className='add-btn'>
@@ -303,7 +308,7 @@ const MenuBar = () => {
                                     <h2>Quản lý báo cáo</h2>
                                 </div>
                                 <div className='ct-2'>
-                                    <DSBaoCao></DSBaoCao>
+                                    <TabBaoCao></TabBaoCao>
                                 </div>
                                 <div className='ct-3'>
                                     <div className='add-btn'>
@@ -367,10 +372,11 @@ const MenuBar = () => {
                         <Route path="/log-out" element={
                             <div className='content-inside'>
                                 <Logout></Logout>
-                                
-                               
+
+
                             </div>} />
-                        
+                        <Route path="/devices/add" element={<AddThietBi></AddThietBi>} />
+                        <Route path="/devices/detail/:id" element={<ThongTinThietBi />} />
                     </Routes>
                 </div>
             </div>
