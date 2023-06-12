@@ -23,3 +23,15 @@
 .bottom {
     grid-column: 1 / -1;
 }
+
+.img-add {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.update-btn {
+    position: absolute;
+    right: 90px;
+}

@@ -6,6 +6,7 @@ import './ThietBi.css'
 import ThongTinThietBi from "./ThongTinThietBi/ThongTinThietBi";
 import { Router, Route, Link, BrowserRouter, Routes } from "react-router-dom";
 import { AddThietBi } from "./AddThietBi/AddThietBi";
+import {CapNhapThietBi} from "./CapNhapThietBi/CapNhapThietBi";
 
 const TabThietBi = () => {
     const [userList, setUserList] = useState<any[]>([]);
@@ -142,7 +143,7 @@ const TabThietBi = () => {
                         render: (_, record) => (
                             <Space size="middle">
                                 <Link to={`/devices/detail/${record.id}`}>Chi tiết</Link>
-                                <a>Cập nhật</a>
+                                <Link to={`/devices/update/${record.id}`}>Cập nhập</Link>
                             </Space>
                         ),
                     },
@@ -151,6 +152,7 @@ const TabThietBi = () => {
             />
             <Routes>
                 <Route path="/devices/detail/:id" element={<ThongTinThietBi />} />
+                <Route path="/devices/update/:id" element={<CapNhapThietBi />} />
             </Routes>
         </>
 

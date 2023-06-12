@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Input from '../../Input/Input';
-import '../AddThietBi/AddThietBi.css';
+import '../AddThietBi/AddThietBi.css'
 import Button1 from '../../Button/Button';
 import { db } from '../../../firebase/firebase';
 import { addDoc, collection } from 'firebase/firestore';

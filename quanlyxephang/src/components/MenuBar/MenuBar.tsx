@@ -14,6 +14,7 @@ import TabDichVu from '../DichVu/TabDichVu';
 import TabCapSo from '../CapSo/TabCapSo';
 import TabBaoCao from '../BaoCao/TabBaoCao';
 import  ThongTinThietBi  from '../ThietBi/ThongTinThietBi/ThongTinThietBi';
+import {CapNhapThietBi} from '../ThietBi/CapNhapThietBi/CapNhapThietBi';
 
 const MenuBar = () => {
     const [showData, setShowData] = useState(false);
@@ -377,6 +378,7 @@ const MenuBar = () => {
                             </div>} />
                         <Route path="/devices/add" element={<AddThietBi></AddThietBi>} />
                         <Route path="/devices/detail/:id" element={<ThongTinThietBi />} />
+                        <Route path="/devices/update/:id" element={<CapNhapThietBi />} />
                     </Routes>
                 </div>
             </div>
