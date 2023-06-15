@@ -29,7 +29,21 @@ const TabCapSo = () => {
             return null;
         }
         let color = record.TrangThaiHoatDong.length > 8 ? 'gray' : 'blue';
+        if (record.TrangThaiHoatDong.length === 6) {
+            color = 'red';
+        }
+        if (record.TrangThaiHoatDong.length === 13) {
+            color = 'green';
+        }
+        if (record.TrangThaiHoatDong.length === 14) {
+            color = 'blue';
+        }
+        if (record.TrangThaiHoatDong.length === 4) {
+            color = 'gray';
+        }
+        
         let tagContent = record.TrangThaiHoatDong.toUpperCase();
+        
 
         return (
             <Tag color={color} key={record.TrangThaiHoatDong}>
@@ -76,6 +90,10 @@ const TabCapSo = () => {
                     filters: [
                         { text: "Đang chờ", value: "Đang chờ" },
                         { text: "Đã sử dụng", value: "Đã sử dụng" },
+                        { text: "Bỏ qua", value: "Bỏ qua" },
+                        { text: "Đã hoàn thành", value: "Đã hoàn thành" },
+                        { text: "Đang thực hiện", value: "Đang thực hiện" },
+                        { text: "Vắng", value: "Vắng" },
                     ],
                     onFilter: (value, record) => record.TrangThaiHoatDong === value,
                     render: renderTrangThaiHoatDong,
@@ -91,16 +109,7 @@ const TabCapSo = () => {
                     onFilter: (value, record) => record.NguonCap === value,
 
                 },
-                Table.EXPAND_COLUMN,
-                {
-                    title: 'Chi tiết',
-                    key: 'action',
-                    render: (_) => (
-                        <Space size="middle">
-                            <a> Chi tiết </a>
-                        </Space>
-                    ),
-                },
+                
             ]}
             rowKey="MaDV"
         />

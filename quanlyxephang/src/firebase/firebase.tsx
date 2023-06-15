@@ -3,6 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
@@ -19,6 +20,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+const storage = getStorage(app);
+export { storage };
 
 export const loginWithEmailAndPassword = async (email: string, password: string) => {
   try {

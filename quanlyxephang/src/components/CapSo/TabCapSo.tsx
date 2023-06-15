@@ -3,13 +3,11 @@ import { useEffect, useState } from "react";
 import { Space, Table, Tag } from "antd";
 import { db } from "../../firebase/firebase";
 import './CapSo.css'
+import { Link, Route, Routes } from "react-router-dom";
+import ThongTinCapSo from "./ThongTinCapSo/ThongTinCapSo";
 
 const TabCapSo = () => {
     const [userList, setUserList] = useState<any[]>([]);
-
-
-
-
     useEffect(() => {
         const colRef = collection(db, "CapSo");
         const unsubscribe = onSnapshot(colRef, (snapshot) => {
@@ -29,6 +27,18 @@ const TabCapSo = () => {
             return null;
         }
         let color = record.TrangThaiHoatDong.length > 8 ? 'gray' : 'blue';
+        if (record.TrangThaiHoatDong.length === 6) {
+            color = 'red';
+        }
+        if (record.TrangThaiHoatDong.length === 13) {
+            color = 'green';
+        }
+        if (record.TrangThaiHoatDong.length === 14) {
+            color = 'blue';
+        }
+        if (record.TrangThaiHoatDong.length === 4) {
+            color = 'gray';
+        }
         let tagContent = record.TrangThaiHoatDong.toUpperCase();
 
         return (
@@ -39,7 +49,7 @@ const TabCapSo = () => {
     };
 
     return (
-        <Table
+        <><Table
             dataSource={userList}
             columns={[
                 {
@@ -62,10 +72,8 @@ const TabCapSo = () => {
                         { text: "Khám sản - Phụ khoa", value: "Khám sản - Phụ khoa" },
                         { text: "Khám răng", value: "Khám răng" },
                         { text: "Khám tổng quát", value: "Khám tổng quát" },
-                        
                     ],
                     onFilter: (value, record) => record.TenDV === value,
-                    
                 },
                 { title: "Thời gian cấp", dataIndex: "ThoiGianCap", key: "ThoiGianCap" },
                 { title: "Hạn sử dụng", dataIndex: "HanSuDung", key: "HanSuDung" },
@@ -76,6 +84,10 @@ const TabCapSo = () => {
                     filters: [
                         { text: "Đang chờ", value: "Đang chờ" },
                         { text: "Đã sử dụng", value: "Đã sử dụng" },
+                        { text: "Bỏ qua", value: "Bỏ qua" },
+                        { text: "Đã hoàn thành", value: "Đã hoàn thành" },
+                        { text: "Đang thực hiện", value: "Đang thực hiện" },
+                        { text: "Vắng", value: "Vắng" },
                     ],
                     onFilter: (value, record) => record.TrangThaiHoatDong === value,
                     render: renderTrangThaiHoatDong,
@@ -89,21 +101,24 @@ const TabCapSo = () => {
                         { text: "Hệ thống", value: "Hệ thống" },
                     ],
                     onFilter: (value, record) => record.NguonCap === value,
-
                 },
                 Table.EXPAND_COLUMN,
                 {
-                    title: 'Chi tiết',
-                    key: 'action',
-                    render: (_) => (
+                    title: "Xem thêm",
+                    key: "action",
+                    render: (_, record) => (
                         <Space size="middle">
-                            <a> Chi tiết </a>
+                            <Link to={`/numbering/detail/${record.id}`}>Chi tiết</Link>
+
                         </Space>
                     ),
                 },
             ]}
-            rowKey="MaDV"
-        />
+            rowKey="MaDV" /><Routes>
+                <Route path="/numbering/detail/:id" element={<ThongTinCapSo />} />
+
+            </Routes></>
+
     );
 };
 

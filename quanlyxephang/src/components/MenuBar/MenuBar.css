@@ -90,7 +90,7 @@
 
 .ct-3 {
     grid-column: 2 / 3;
-    
+
 
 }
 
@@ -100,4 +100,18 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.image-container {
+    width: 1200px;
+    height: 790px;
+    overflow: hidden;
+    /* Ẩn phần dư của ảnh nếu vượt quá khung */
+}
+
+.image {
+    width: 100%;
+    /* Đảm bảo ảnh chiếm toàn bộ kích thước của khung */
+    height: auto;
+    /* Tự động điều chỉnh chiều cao theo tỉ lệ của ảnh */
 }

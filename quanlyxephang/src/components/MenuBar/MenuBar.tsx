@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter, Link, Route, Router, Routes, useNavigate } from 'react-router-dom';
 import Logoalta from '../Logo/Logo-MenuBar/Logo';
 import '../MenuBar/MenuBar.css'
-import DSThietBi from '../ThietBi/ThietBi';
-import DSDichVu from '../DichVu/DichVu';
-import DSCapSo from '../CapSo/CapSo';
-import DSBaoCao from '../BaoCao/BaoCao';
 import Button1 from '../Button/Button';
 import { AddThietBi } from '../ThietBi/AddThietBi/AddThietBi';
 import TabThietBi from '../ThietBi/TabThietBi';
@@ -13,8 +9,13 @@ import Logout from '../Logout/Logout';
 import TabDichVu from '../DichVu/TabDichVu';
 import TabCapSo from '../CapSo/TabCapSo';
 import TabBaoCao from '../BaoCao/TabBaoCao';
-import  ThongTinThietBi  from '../ThietBi/ThongTinThietBi/ThongTinThietBi';
-import {CapNhapThietBi} from '../ThietBi/CapNhapThietBi/CapNhapThietBi';
+import ThongTinThietBi from '../ThietBi/ThongTinThietBi/ThongTinThietBi';
+import { CapNhapThietBi } from '../ThietBi/CapNhapThietBi/CapNhapThietBi';
+import { AddDichVu } from '../DichVu/AddDichVu/AddDichVu';
+import ThongTinDichVu from '../DichVu/ThongTinDichVu/ThongTinDichVu';
+import { CapNhapDichVu } from '../DichVu/CapNhapDichVu/CapNhapDichVu';
+import ThongTinCapSo from '../CapSo/ThongTinCapSo/ThongTinCapSo';
+import DashboardImage from '../../img/DashBoard.png'
 
 const MenuBar = () => {
     const [showData, setShowData] = useState(false);
@@ -201,7 +202,9 @@ const MenuBar = () => {
                 <div className='content'>
 
                     <Routes>
-                        <Route path="/" element={<h2>Trang Dashboard</h2>} />
+                        <Route path="/" element={<div className='image-container'>
+                            <img src={DashboardImage} alt="Dashboard" className='image' />
+                        </div>} />
                         <Route path="/devices" element={
                             <>
                                 <div className='content-inside'>
@@ -379,6 +382,11 @@ const MenuBar = () => {
                         <Route path="/devices/add" element={<AddThietBi></AddThietBi>} />
                         <Route path="/devices/detail/:id" element={<ThongTinThietBi />} />
                         <Route path="/devices/update/:id" element={<CapNhapThietBi />} />
+
+                        <Route path="/services/add" element={<AddDichVu></AddDichVu>} />
+                        <Route path="/services/detail/:id" element={<ThongTinDichVu />} />
+                        <Route path="/services/update/:id" element={<CapNhapDichVu />} />
+                        <Route path="/numbering/detail/:id" element={<ThongTinCapSo />} />
                     </Routes>
                 </div>
             </div>

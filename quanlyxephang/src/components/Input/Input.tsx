@@ -6,10 +6,12 @@ type inputProps = {
     onChange: any
     style?: React.CSSProperties;
     disabled?: boolean;
+    suffix?: React.ReactNode;
+    type?: string;
 }
 
 const Input = (props: inputProps) => {
-    const { style = {}, onChange,placeholder, ...otherProps } = props;
+    const { style = {}, suffix, type, onChange,placeholder, ...otherProps } = props;
     return (
         
             <div className="containerInput">

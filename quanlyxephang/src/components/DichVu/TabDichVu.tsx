@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { Space, Table, Tag } from "antd";
 import { db } from "../../firebase/firebase";
 import './DichVu.css'
+import { Link, Route, Routes } from "react-router-dom";
+import { CapNhapThietBi } from "../ThietBi/CapNhapThietBi/CapNhapThietBi";
+import ThongTinThietBi from "../ThietBi/ThongTinThietBi/ThongTinThietBi";
+import ThongTinDichVu from "./ThongTinDichVu/ThongTinDichVu";
 
 const TabDichVu = () => {
     const [userList, setUserList] = useState<any[]>([]);
@@ -39,7 +43,7 @@ const TabDichVu = () => {
     };
 
     return (
-        <Table
+        <><Table
             dataSource={userList}
             columns={[
                 {
@@ -68,18 +72,21 @@ const TabDichVu = () => {
                 },
                 Table.EXPAND_COLUMN,
                 {
-                    title: 'Xem thêm',
-                    key: 'action',
-                    render: (_) => (
+                    title: "Xem thêm",
+                    key: "action",
+                    render: (_, record) => (
                         <Space size="middle">
-                            <a> Chi tiết </a>
-                            <a> Cập nhập </a>
+                            <Link to={`/services/detail/${record.id}`}>Chi tiết</Link>
+                            <Link to={`/services/update/${record.id}`}>Cập nhập</Link>
                         </Space>
                     ),
                 },
             ]}
-            rowKey="MaDV"
-        />
+            rowKey="MaDV" /><Routes>
+                <Route path="/services/detail/:id" element={<ThongTinDichVu />} />
+                <Route path="/services/update/:id" element={<CapNhapThietBi />} />
+            </Routes></>
+
     );
 };
 
