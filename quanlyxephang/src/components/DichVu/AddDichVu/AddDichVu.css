@@ -1,0 +1,173 @@
+.container-ip {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+  width: 1152px;
+  height: 650px;
+
+
+}
+
+.left {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  /* Chiếm cả hai hàng đầu của grid */
+}
+
+.right {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.footer {
+  grid-column: 1 / span 2;
+  /* Chiếm toàn bộ hai cột của grid */
+  grid-row: 3;
+}
+
+.title-addtb {
+  padding-top: 20px;
+  padding-left: 30px;
+  color: #FF7506;
+  font-family: 'Nunito';
+  font-style: normal;
+  line-height: 36px;
+}
+
+.tttb-1 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.tttb-2 {
+  margin-top: 120px;
+  padding-left: 20px;
+}
+
+.tttb-3 {
+  margin-top: 220px;
+  padding-left: 20px;
+}
+
+.tttb-4 {
+
+  margin-top: 154px;
+}
+
+.tttb-5 {
+  margin-top: 254px;
+
+}
+
+.tttb-6 {
+  margin-top: 354px;
+
+}
+
+.tttb-7 {
+  margin-top: 320px;
+  padding-left: 20px;
+}
+
+.tttb-bb {
+  margin-top: 402px;
+  padding-left: 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+.btn-hb {
+  padding-left: 75%;
+}
+
+.btn-ttb {}
+
+.title-h2 {
+  padding-top: 70px;
+  padding-left: 30px;
+  color: #FF7506;
+  font-family: 'Nunito';
+  font-style: normal;
+  line-height: 36px;
+}
+
+.check-box-1 .ant-checkbox-wrapper {
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.check-box-1 .ant-checkbox-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.check-box-2 .ant-checkbox-wrapper {
+  padding-top: 20px;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.check-box-2 .ant-checkbox-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+.check-box-3 .ant-checkbox-wrapper {
+  padding-top: 25px;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.check-box-3 .ant-checkbox-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+.check-box-4 .ant-checkbox-wrapper {
+  padding-top: 30px;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.check-box-4 .ant-checkbox-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+
+
+
+.check-box-text {
+  font-family: 'Nunito';
+  font-style: normal;
+  align-items: center;
+  color: #282739;
+}
+.checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.check-box-text {
+  margin-right: 20px;
+}
+.check-box-text-mg-l-50px {
+  font-family: 'Nunito';
+  font-style: normal;
+  align-items: center;
+  color: #282739;
+  margin-left: 50px;
+}

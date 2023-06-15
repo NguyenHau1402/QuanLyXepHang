@@ -12,6 +12,7 @@ import Loggin from './pages/Account/Login/llogin';
 import Logout from './components/Logout/Logout';
 import ThongTinThietBi from './components/ThietBi/ThongTinThietBi/ThongTinThietBi';
 import ThongTinThietBia from './components/ThietBi/ThongTinThietBi/abc';
+import { AddDichVu } from './components/DichVu/AddDichVu/AddDichVu';
 
 
 
@@ -23,6 +24,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <div>
     
-  <Loggin></Loggin>
+  <AddDichVu></AddDichVu>
   </div>
 )
